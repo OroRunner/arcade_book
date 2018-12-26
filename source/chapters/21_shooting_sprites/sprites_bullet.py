@@ -120,6 +120,9 @@ class MyGame(arcade.Window):
         # Loop through each bullet
         for bullet in self.bullet_list:
 
+            # move the bullet
+            bullet.bottom += 10
+            
             # Check this bullet to see if it hit a coin
             hit_list = arcade.check_for_collision_with_list(bullet, self.coin_list)
 
